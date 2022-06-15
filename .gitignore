@@ -17,6 +17,9 @@
 !/log/.keep
 !/tmp/.keep
 
+# Ignore all secret API keys.
+.env*
+
 # Ignore pidfiles, but keep the directory.
 /tmp/pids/*
 !/tmp/pids/
