@@ -48,6 +48,13 @@ gem "sassc-rails"
 # Use Bootstrap to style pages
 gem 'bootstrap'
 
+# Use Bootstrap to style pages
+gem 'jquery-rails'
+
+# Font-awesome
+gem "font-awesome-rails"
+
+
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
 
