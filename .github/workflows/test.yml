@@ -9,12 +9,12 @@ jobs:
       NODE_ENV: test
     runs-on: ubuntu-latest
     services:
-      sqlite3:
-        image: sqlite3
+      postgres:
+        image: postgres
         env:
-          SQLITE3_PASSWORD: sqlite3
+          POSTGRES_PASSWORD: postgres
         ports:
-          - 3000:3000
+          - 5432:5432
         options: >-
           --health-cmd pg_isready
           --health-interval 10s
@@ -30,7 +30,7 @@ jobs:
       - name: Prepare DB
         run: |
           cp config/database.github.yml config/database.yml
-          bundle exec rails db:test:prepare
+      bundle exec rails db:test:prepare
       - name: Run system tests # Minitest
         run: bundle exec rails test:system
       - name: Run unit tests # Minitest
