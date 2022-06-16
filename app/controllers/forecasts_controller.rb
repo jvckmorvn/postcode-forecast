@@ -5,7 +5,7 @@ class ForecastsController < ApplicationController
 
   def create
     @forecast = Forecast.new(forecast_params)
-    if @forecast.save
+    if @forecast.is_valid?
       redirect_to forecast_path(@forecast)
     else
       render :new, status: :unprocessable_entity
@@ -26,6 +26,10 @@ class ForecastsController < ApplicationController
   end
 
   private
+
+  def forecast_params
+    params.require(:forecast).permit(:postcode)
+  end
 
   def is_valid?
     # @city == 'UK' && @postcode == valid
