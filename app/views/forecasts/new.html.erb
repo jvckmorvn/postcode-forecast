@@ -1,8 +1,8 @@
-<div class="m-3">
+<div class="m-3" data-controller="forecast">
   <h1 class="display-4">Postcode Forecast</h1>
   <p class="lead">Enter a UK postcode below to see real-time temperature updates for your area.</p>
   <%= simple_form_for @forecast do |f| %>
-    <%= f.input :postcode %>
-    <%= f.button :submit, value: "Search" %>
+    <%= f.input :postcode, label: false, class: "me-2", placeholder: "Search postcode..." %>
+    <%= f.button :submit, value: "Search", class: "btn btn-primary mt-2" %>
   <% end %>
 </div>
