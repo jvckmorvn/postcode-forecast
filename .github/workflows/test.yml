@@ -10,11 +10,11 @@ jobs:
     runs-on: ubuntu-latest
     services:
       postgres:
-        image: postgres
+        image: sqlite3
         env:
-          POSTGRES_PASSWORD: postgres
+          POSTGRES_PASSWORD: sqlite3
         ports:
-          - 5432:5432
+          - 3000:3000
         options: >-
           --health-cmd pg_isready
           --health-interval 10s
