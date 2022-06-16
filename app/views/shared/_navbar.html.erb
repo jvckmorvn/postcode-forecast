@@ -1,9 +1,9 @@
-<nav class="navbar navbar-light bg-light justify-content-end">
+<nav class="navbar navbar-light bg-light justify-content-start ms-3">
   <form class="form-inline">
     <div class="input-group">
       <input type="text" class="form-control" placeholder="Search postcode..." aria-label="Postcode" aria-describedby="basic-addon1">
-      <div class="input-group-append me-3">
-        <button class="btn btn-outline-secondary" type="button">Search</button>
+      <div class="input-group-append">
+        <%= button_tag "Search", class: "btn btn-outline-secondary" %>
       </div>
     </div>
   </form>

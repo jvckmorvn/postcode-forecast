@@ -46,13 +46,16 @@ gem "bootsnap", require: false
 gem "sassc-rails"
 
 # Use Bootstrap to style pages
-gem 'bootstrap'
+gem "bootstrap"
 
 # Use Bootstrap to style pages
-gem 'jquery-rails'
+gem "jquery-rails"
 
 # Font-awesome
 gem "font-awesome-rails"
+
+# Simple Form
+gem "simple_form"
 
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
@@ -61,6 +64,7 @@ gem "font-awesome-rails"
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
+  gem "dotenv-rails"
 end
 
 group :development do

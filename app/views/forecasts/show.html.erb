@@ -1,0 +1,8 @@
+<div class="jumbotron m-3">
+  <h1 class="display-4">Hello, to you in <%= @city %>!</h1>
+  <p class="lead font-weight-bold">The forecast for your postcode today is xxx.</p>
+  <p class="lead">With highs of up to <code style="color: red;"><%= @max_temp %>°C</code>, and lows down to <code style="color: blue;"><%= @min_temp %>°C</code>.</p>
+  <p class="lead pt-2">
+    <%= link_to "Reset", root_path, class: "btn btn-primary btn-lg" %>
+  </p>
+</div>
