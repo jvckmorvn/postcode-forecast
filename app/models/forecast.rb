@@ -13,7 +13,7 @@ class Forecast < ApplicationRecord
     api_key = ENV['WEATHER_API_KEY']
     slug = postcode.split.join('-')
     url = "https://api.weatherapi.com/v1/forecast.json?key=#{api_key}&q=#{slug}"
-    uri = URI.open(url).read
+    uri = URI.parse(url).open.read
     response = JSON.parse(uri)
     self.city = response['location']['name']
     self.country = response['location']['country']
