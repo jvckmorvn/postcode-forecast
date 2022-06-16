@@ -30,7 +30,7 @@ jobs:
       - name: Prepare DB
         run: |
           cp config/database.github.yml config/database.yml
-      bundle exec rails db:test:prepare
+          bundle exec rails db:test:prepare
       - name: Run system tests # Minitest
         run: bundle exec rails test:system
       - name: Run unit tests # Minitest
