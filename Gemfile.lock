@@ -230,7 +230,6 @@ GEM
       actionpack (>= 5.2)
       activesupport (>= 5.2)
       sprockets (>= 3.0.0)
-    sqlite3 (1.4.4)
     strscan (3.0.3)
     thor (1.2.1)
     tilt (2.0.10)
@@ -279,7 +278,6 @@ DEPENDENCIES
   selenium-webdriver
   simple_form
   sprockets-rails
-  sqlite3 (~> 1.4)
   turbo-rails
   tzinfo-data
   web-console
