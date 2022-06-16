@@ -1,8 +1,8 @@
 test:
-  adapter: postgresql
+  adapter: sqlite3
   encoding: unicode
   host: localhost
-  port: 5432
-  username: postgres
-  password: postgres
+  port: 3000
+  username: sqlite3
+  password: sqlite3
   database: rails_testing_test

@@ -9,10 +9,10 @@ jobs:
       NODE_ENV: test
     runs-on: ubuntu-latest
     services:
-      postgres:
+      sqlite3:
         image: sqlite3
         env:
-          POSTGRES_PASSWORD: sqlite3
+          SQLITE3_PASSWORD: sqlite3
         ports:
           - 3000:3000
         options: >-
