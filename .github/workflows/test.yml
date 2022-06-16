@@ -1,0 +1,19 @@
+name: Test
+
+on: [push]
+
+jobs:
+  test:
+    env:
+      RAILS_ENV: test
+      NODE_ENV: test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Run system Minitest
+        run: rails test:system
+      - name: Run unit Minitest
+        run: rails test:models
+      - name: Run RSpec tests
+        run: rspec spec/models
