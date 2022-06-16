@@ -6,6 +6,8 @@ class Forecast < ApplicationRecord
   validates :postcode, presence: { message: "Postcode can't be blank." }
   validates :postcode,
             format: { with: /[A-Z]{1,2}[0-9][0-9A-Z]?\s?[0-9][A-Z]{2}/i, message: 'Please enter a valid UK postcode.' }
+  validates :hot, presence: { message: "Heat threshold can't be blank." }
+  validates :cold, presence: { message: "Cold threshold can't be blank." }
 
   def fetch_values
     api_key = ENV['WEATHER_API_KEY']
@@ -17,7 +19,7 @@ class Forecast < ApplicationRecord
     self.country = response['location']['country']
     self.max_temp = response['forecast']['forecastday'][0]['day']['maxtemp_c'].to_f
     self.min_temp = response['forecast']['forecastday'][0]['day']['mintemp_c'].to_f
-    self.temp = avg_temp(max_temp, min_temp)
+    self.temp = set_threshold(max_temp, hot, cold)
   end
 
   def format_postcode
@@ -33,14 +35,13 @@ class Forecast < ApplicationRecord
 
   private
 
-  def avg_temp(max_temp, min_temp)
-    avg = (max_temp.to_i + min_temp.to_i / 2)
-    if avg >= 30
+  def set_threshold(max_temp, hot, cold)
+    if max_temp.to_i >= hot
       'hot'
-    elsif avg >= 20
-      'warm'
-    else
+    elsif max_temp.to_i <= cold
       'cold'
+    else
+      'warm'
     end
   end
 end

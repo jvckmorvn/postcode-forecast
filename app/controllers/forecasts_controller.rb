@@ -26,6 +26,6 @@ class ForecastsController < ApplicationController
   private
 
   def forecast_params
-    params.require(:forecast).permit(:postcode)
+    params.require(:forecast).permit(:postcode, :hot, :cold)
   end
 end
