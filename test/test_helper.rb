@@ -16,4 +16,4 @@ module ActiveSupport
   end
 end
 
-Capybara.save_path = Rails.root.join("tmp/capybara")
+Capybara.save_path = Rails.root.join('tmp/capybara')
