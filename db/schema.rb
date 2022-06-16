@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -10,16 +12,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_06_16_151306) do
-  create_table "forecasts", force: :cascade do |t|
-    t.string "postcode"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string "city"
-    t.float "min_temp"
-    t.float "max_temp"
-    t.string "temp"
-    t.string "country"
+ActiveRecord::Schema[7.0].define(version: 20_220_616_151_306) do
+  create_table 'forecasts', force: :cascade do |t|
+    t.string 'postcode'
+    t.datetime 'created_at', null: false
+    t.datetime 'updated_at', null: false
+    t.string 'city'
+    t.float 'min_temp'
+    t.float 'max_temp'
+    t.string 'temp'
+    t.string 'country'
   end
-
 end

@@ -101,8 +101,6 @@ GEM
     erubi (1.10.0)
     execjs (2.8.1)
     ffi (1.15.5)
-    font-awesome-rails (4.7.0.8)
-      railties (>= 3.2, < 8.0)
     globalid (1.0.0)
       activesupport (>= 5.0)
     i18n (1.10.0)
@@ -212,8 +210,6 @@ GEM
       activesupport (>= 5.2)
       sprockets (>= 3.0.0)
     sqlite3 (1.4.4)
-    stimulus-rails (1.0.4)
-      railties (>= 6.0.0)
     strscan (3.0.3)
     thor (1.2.1)
     tilt (2.0.10)
@@ -250,7 +246,6 @@ DEPENDENCIES
   capybara
   debug
   dotenv-rails
-  font-awesome-rails
   importmap-rails
   jbuilder
   jquery-rails
@@ -261,7 +256,6 @@ DEPENDENCIES
   simple_form
   sprockets-rails
   sqlite3 (~> 1.4)
-  stimulus-rails
   turbo-rails
   tzinfo-data
   web-console

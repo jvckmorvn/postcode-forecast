@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class ForecastsController < ApplicationController
   def new
     @forecast = Forecast.new
@@ -7,8 +9,11 @@ class ForecastsController < ApplicationController
     @forecast = Forecast.new(forecast_params)
     if @forecast.valid?
       @forecast.fetch_values
-      @forecast.save
-      redirect_to forecast_path(@forecast)
+      p @forecast
+      if @forecast.country.include?('UK')
+        @forecast.save
+        redirect_to forecast_path(@forecast)
+      end
     else
       render :new, status: :unprocessable_entity
     end

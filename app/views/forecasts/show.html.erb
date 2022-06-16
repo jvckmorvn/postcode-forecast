@@ -1,6 +1,6 @@
 <div class="jumbotron m-3">
   <h1 class="display-4">Hello, to you in <%= @forecast.city %>!</h1>
-  <p class="lead font-weight-bold">It's shaping up to be a <%= @forecast.temp %> one for <strong><%= @forecast.postcode.upcase %></strong> today.</p>
+  <p class="lead font-weight-bold">It's shaping up to be a <%= @forecast.temp %> one for <strong><%= @forecast.format_postcode %></strong> today (by your estimations).</p>
   <p class="lead">We're expecting highs of up to <code style="color: red;"><%= @forecast.max_temp %>°C</code>, and lows down to <code style="color: blue;"><%= @forecast.min_temp %>°C</code>.</p>
   <p class="lead">
     <%= link_to "Reset", root_path, class: "btn btn-primary btn-lg" %>
