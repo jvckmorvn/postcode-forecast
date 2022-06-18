@@ -1,3 +1,4 @@
+# Introduction
 Welcome to my super-simple temperature forecast app! Here's how it works: enter any valid UK postcode, along with two temperatures you consider "hot" and "cold", and the app will return a real-time temperature update for that area according to your input (if the max temperature for the area is below what you consider "cold", then the app will return "cold", and so on).
 
 # Ruby versions
