@@ -24,6 +24,8 @@ class Forecast < ApplicationRecord
 
   def format_postcode
     case postcode.length
+    when 8
+      "#{postcode.first(4).upcase} #{postcode.last(3).upcase}"
     when 7
       "#{postcode.first(4).upcase} #{postcode.last(3).upcase}"
     when 6
