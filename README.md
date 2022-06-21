@@ -1,5 +1,5 @@
 ## Introduction
-Welcome to my super-simple temperature forecast app! Here's how it works: enter any valid UK postcode, along with two temperatures you consider 'hot' and 'cold', and the app will return a real-time temperature update for that area according to your input (if the max temperature for the area is below what you consider 'cold', then the app will return 'cold', and so on).
+Welcome to my super-simple postcode forecast app! Here's how it works: enter any valid UK postcode, along with two temperatures you consider 'hot' and 'cold', and the app will return a real-time temperature update for that area according to your input (if the max temperature for the area is below what you consider 'cold', then the app will return 'cold', and so on).
 
 ## Ruby versions
 - Ruby '3.0.3'
@@ -11,7 +11,7 @@ Welcome to my super-simple temperature forecast app! Here's how it works: enter 
 - Run `rails db:create db:migrate` in your terminal to set up the database.
 - Finally, run `rails server` and navigate to 'localhost:3000' in your web browser to start using the app!
 
-NB: You will need to plug in your own API key for the app to work; such a key can be obtained for free from [Weather API](https://www.weatherapi.com/) (see their documentation for more info).
+**NB:** You will need to plug in your own API key for the app to work; such a key can be obtained for free from [Weather API](https://www.weatherapi.com/) (see their documentation for more info).
 The key should be stored in a .env file which itself should be listed within your .gitignore file so as to keep it private.
 
 ## Testing
