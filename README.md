@@ -21,10 +21,8 @@ Unit tests have also been written using both Minitest and RSpec, which can be ru
 
 I did attempt to implement continuous integration, but the tests kept getting stuck at the point during which Chrome is launched within the virtual machine. I tried changing the VM browser to Firefox to no avail. I googled the error and found various suggestions that involved configuring the VM Chrome with `--no-sandbox`, however these suggestions also warned that this configuration was 'unsupported and highly discouraged', and so I decided to comment out the integration tests until I could get some feedback on the situation. The tests themselves run and pass locally without any issues:
 ```
-Selenium::WebDriver::Error::UnknownError:
-            unknown error: Chrome failed to start: exited abnormally.
-              (unknown error: DevToolsActivePort file doesn't exist)
-              (The process started from chrome location /usr/bin/google-chrome is no longer 
-running, so ChromeDriver is assuming that Chrome has crashed.)
+Selenium::WebDriver::Error::UnknownError: unknown error: Chrome failed to start: exited abnormally.
+(unknown error: DevToolsActivePort file doesn't exist)
+(The process started from chrome location /usr/bin/google-chrome is no longer running, so ChromeDriver is assuming that Chrome has crashed.)
 ```
 All that being said, happy forecasting! ☀️
